@@ -9,14 +9,19 @@ turno_dia = ['Ana', 'Marcos', 'Alice', 'Melissa']
 turno_noite = ['Pedro', 'Sophia', 'Bruno']
 tem_carro = ['Marcos', 'Alice', 'Bruno', 'Melissa']
 
-# Gerar as listas utilizando 'Sets'
-funcionarios_set = set(funcionarios)
-turno_dia_set = set(turno_dia)
-turno_noite_set = set(turno_noite)
-tem_carro_set = set(tem_carro)
-lista1 = turno_noite_set.intersection(tem_carro_set)
-lista2 = turno_dia_set.intersection(tem_carro_set)
-lista3 = funcionarios_set.difference(tem_carro_set)
+# Gerar as listas utilizando 'Sets' (primeira resposta)
+# funcionarios_set = set(funcionarios)
+# turno_dia_set = set(turno_dia)
+# turno_noite_set = set(turno_noite)
+# tem_carro_set = set(tem_carro)
+# lista1 = turno_noite_set.intersection(tem_carro_set)
+# lista2 = turno_dia_set.intersection(tem_carro_set)
+# lista3 = funcionarios_set.difference(tem_carro_set)
+
+# Resposta corrigida utilizando 'Sets' (segunda resposta)
+lista1 = set(tem_carro).intersection(turno_noite)
+lista2 = set(tem_carro).intersection(turno_dia)
+lista3 = set(funcionarios).difference(tem_carro)
 
 # Exibir as listas
 print("Funcionários que tem carro e trabalham a noite:", lista1)
