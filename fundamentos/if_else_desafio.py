@@ -12,19 +12,36 @@
 # Solicitar a temperatura do Steak ao usuário
 temperatura = int(input("Informe a temperatura do Steak em Celsius: "))
 
-# Verificar o ponto de cozimento com base na temperatura
+# Verificar o ponto de cozimento com base na temperatura (primeira resposta)
+# def verifica_temperatura(temperatura):
+#     if temperatura < 48:
+#         print("Crua - Cozinhar por mais alguns minutos")
+#     elif 48 <= temperatura <= 53:
+#         print("Selada")
+#     elif 54 <= temperatura <= 60:
+#         print("Ao ponto para mal passado")
+#     elif 61 <= temperatura <= 65:
+#         print("Ao ponto")
+#     elif 66 <= temperatura <= 71:
+#         print("Bem passado")
+#     else:
+#         print("Queimada - Finalizar o cozimento")
+
+# verifica_temperatura(temperatura) 
+
+# Segunda resposta após correção utilizando "in range"
 def verifica_temperatura(temperatura):
     if temperatura < 48:
         print("Crua - Cozinhar por mais alguns minutos")
-    elif 48 <= temperatura <= 53:
+    elif temperatura in range(48, 53):
         print("Selada")
-    elif 54 <= temperatura <= 60:
+    elif temperatura in range(54, 59):
         print("Ao ponto para mal passado")
-    elif 61 <= temperatura <= 65:
+    elif temperatura in range(60, 64):
         print("Ao ponto")
-    elif 66 <= temperatura <= 71:
+    elif temperatura in range(65, 70):
         print("Bem passado")
     else:
         print("Queimada - Finalizar o cozimento")
 
-verifica_temperatura(temperatura) 
+verifica_temperatura(temperatura)
